@@ -3,7 +3,7 @@ define phpmyadmin::install($version = $title, $installdir)
 	# Params
 	$pkgname     = "phpMyAdmin-${version}-all-languages.tar.bz2"
 	$urlsource   = "http://downloads.sourceforge.net/project/phpmyadmin/phpMyAdmin/${version}/phpMyAdmin-${version}-all-languages.tar.bz2" 
-	$destonation = "${phpmyadmin::params::srcdir}/${pkgname}"
+	$destination = "${phpmyadmin::params::srcdir}/${pkgname}"
 	# Params
 
 	# Creating source directory
@@ -18,7 +18,7 @@ define phpmyadmin::install($version = $title, $installdir)
 	# Downloading the package
 	wget::fetch {'wget-phpmyadmin':
 		source      => $urlsource,
-		destonation => $destonation,
+		destination => $destination,
 		before      => Exec['tar-phpmyadmin'],
 	}
 	# Downloading the package
@@ -30,7 +30,7 @@ define phpmyadmin::install($version = $title, $installdir)
 		cwd     => $phpmyadmin::params::srcdir,
 		onlyif  => [
 			"test -f ${destination}",
-			"test ! -d ${phpmyadmin::params::srcdir}/phpMyAdmin-${version}",
+			"test ! -d ${phpmyadmin::params::srcdir}/phpMyAdmin-${version}-all-languages",
 		],
 		before  => Exec['copy-phpmyadmin'],
 	}
@@ -44,13 +44,13 @@ define phpmyadmin::install($version = $title, $installdir)
 		mode   => 0755,
 	}
 	exec {'copy-phpmyadmin':
-		command => "cp -Rf ${phpmyadmin::params::srcdir}/phpMyAdmin-${version} ${phpmyadmin::params::instdir}/${version}",
+		command => "cp -Rf ${phpmyadmin::params::srcdir}/phpMyAdmin-${version}-all-languages ${phpmyadmin::params::instdir}/${version}",
 		path    => ['/bin','/usr/bin'],
 		onlyif  => [
-			"test -d ${phpmyadmin::params::srcdir}/phpMyAdmin-${version}",
+			"test -d ${phpmyadmin::params::srcdir}/phpMyAdmin-${version}-all-languages",
 			"test ! -d ${phpmyadmin::params::instdir}/${version}",
 		],
-		require => $phpmyadmin::params::instdir,
+		require => File[$phpmyadmin::params::instdir],
 	}
 	file {"${phpmyadmin::params::instdir}/current":
 		ensure => link,
