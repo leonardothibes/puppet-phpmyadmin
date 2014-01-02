@@ -4,5 +4,9 @@ class phpmyadmin::dependencies
         fail("Unsupported platform: ${osfamily}/${operatingsystem}")
     }   
     require wget
-    package {['php5']: ensure  => present}
+    package {['php5', 'php5-mysql', 'mysql-server']: ensure  => present}
+	service {'mysql':
+		ensure  => running,
+		require => Package['mysql-server'],
+	}
 }
