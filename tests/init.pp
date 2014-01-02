@@ -8,4 +8,7 @@
 #
 # Learn more about module testing here: http://docs.puppetlabs.com/guides/tests_smoke.html
 #
-include phpmyadmin
+class {'phpmyadmin':
+	ensure  => present,
+	version => '4.1.3',
+}
