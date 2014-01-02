@@ -1,0 +1,10 @@
+.buildpath
+.DS_Store
+.project
+.settings
+.vagrant
+pkg
+*.db
+*.bak
+*.swp
+*.properties
