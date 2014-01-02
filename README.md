@@ -4,7 +4,7 @@ puppet-phpmyadmin
 A Puppet module that installs phpMyAdmin.
 
 ## Sample Usage
-Install phpmyadmin and use the provided configuration defaults:
+Install phpMyAdmin and use the provided configuration defaults:
 ```puppet
 node default {
 	class {'phpmyadmin':}
@@ -27,7 +27,7 @@ node default {
 }
 ```
 
-Uninstall phpmyadmin:
+Uninstall phpMyAdmin:
 ```puppet
 node default {
 	class {'phpmyadmin':
