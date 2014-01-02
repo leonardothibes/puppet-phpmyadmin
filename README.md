@@ -17,6 +17,16 @@ node default {
 }
 ```
 
+Install a diferent version:
+```puppet
+node default {
+	class {'phpmyadmin':
+		ensure  => present,
+		version => '4.1.3',
+	}
+}
+```
+
 Uninstall phpmyadmin:
 ```puppet
 node default {
