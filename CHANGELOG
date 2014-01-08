@@ -1,3 +1,9 @@
+2014-01-08 Leonardo Thibes <eu@leonardothibes.com> - 1.0.1
+===========================================================
+
+ Leonardo Thibes <eu@leonardothibes.com> (1):
+  * Implementando protecao a instalacao de pacotes com nomes duplicados
+
 2014-01-02 Leonardo Thibes <eu@leonardothibes.com> - 1.0.0
 ===========================================================
 
