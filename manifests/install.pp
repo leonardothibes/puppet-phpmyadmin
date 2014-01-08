@@ -7,11 +7,13 @@ define phpmyadmin::install($version = $title, $installdir)
 	# Params
 
 	# Creating source directory
-	file {$phpmyadmin::params::srcdir:
-		ensure => directory,
-		owner  => root,
-		group  => root,
-		mode   => 0755,
+	if !defined(File[$phpmyadmin::params::srcdir]) {
+		file {$phpmyadmin::params::srcdir:
+			ensure => directory,
+			owner  => root,
+			group  => root,
+			mode   => 0755,
+		}
 	}
 	# Creating source directory
 
