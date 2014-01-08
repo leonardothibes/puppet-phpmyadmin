@@ -1,6 +1,6 @@
 name    'leonardothibes-phpmyadmin'
 author  'leonardothibes'
-version '1.0.1'
+version '1.0.2'
 license 'MIT'
 summary 'A Puppet module that installs phpMyAdmin'
 description 'A Puppet module that installs phpMyAdmin'
