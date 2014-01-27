@@ -6,14 +6,8 @@ class phpmyadmin(
 
 	include phpmyadmin::dependencies
 	case $ensure {
-		'present': {
-			phpmyadmin::install {$version: installdir => $installdir}
-		}
-		'absent': {
-			phpmyadmin::uninstall {'uninstall':}
-		}
-		default: {
-			fail("Unsupported option for \"ensure\" param: ${ensure}")
-		}
+		present: { phpmyadmin::install   {$version: installdir => $installdir} }
+		absent : { phpmyadmin::uninstall {'uninstall':} }
+		default: { fail("Unsupported option for \"ensure\" param: ${ensure}") }
 	}
 }
