@@ -27,6 +27,27 @@ node default {
 }
 ```
 
+Define a root password:
+```puppet
+node default {
+	class {'phpmyadmin':
+		ensure        => present,
+		root_password => 'your-password-here',
+	}
+}
+```
+
+Define a apache virtual host:
+```puppet
+node default {
+	class {'phpmyadmin':
+		ensure     => present,
+		vhost_name => 'phpmyadmin.foo.bar.com',
+		vhost_port => '81',
+	}
+}
+```
+
 Uninstall phpMyAdmin:
 ```puppet
 node default {
