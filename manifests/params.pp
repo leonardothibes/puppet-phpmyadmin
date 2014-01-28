@@ -6,5 +6,5 @@ class phpmyadmin::params
 	$instdir       = "/usr/share/phpMyAdmin"
 	$vhost_name    = "phpmyadmin.local"
 	$vhost_port    = "80"
-	$root_password = ""
+	$root_password = "root"
 }
