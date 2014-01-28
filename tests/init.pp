@@ -9,6 +9,7 @@
 # Learn more about module testing here: http://docs.puppetlabs.com/guides/tests_smoke.html
 #
 class {'phpmyadmin':
-	ensure  => present,
-	version => '4.1.3',
+	ensure        => present,
+	version       => '4.1.3',
+	root_password => 'root',
 }
