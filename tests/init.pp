@@ -10,6 +10,6 @@
 #
 class {'phpmyadmin':
 	ensure        => present,
-	version       => '4.1.3',
 	root_password => 'root',
+	vhost_port    => '80',
 }
