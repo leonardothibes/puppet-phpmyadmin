@@ -1,3 +1,11 @@
+2014-01-28 Leonardo Thibes <eu@leonardothibes.com> - 1.0.3
+===========================================================
+
+ Leonardo Thibes <eu@leonardothibes.com> (3):
+  * Incluindo módulo puppetlabs-mysql como dependência e fazendo  com que ele atualize a senha do root do MySQL #2
+  * Incluindo módulo puppetlabs-mysql como dependência e fazendo com que ele crie o vhost #1
+  * Atualizando os exemplos de uso do README.md
+
 2014-01-08 Leonardo Thibes <eu@leonardothibes.com> - 1.0.2
 ===========================================================
 
