@@ -1,8 +1,8 @@
-2014-01-28 Leonardo Thibes <eu@leonardothibes.com> - 1.0.4
+2014-02-10 Leonardo Thibes <eu@leonardothibes.com> - 1.0.4
 ===========================================================
 
  Leonardo Thibes <eu@leonardothibes.com> (1):
-  * resolvendo proble de conflito com outros modulos que usam a classe "mysql::server" #4'
+  * resolvendo proble de conflito com outros modulos que usam a classe "mysql::server" #4
 
 2014-01-28 Leonardo Thibes <eu@leonardothibes.com> - 1.0.3
 ===========================================================
