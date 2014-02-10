@@ -14,8 +14,10 @@ class phpmyadmin(
 			phpmyadmin::install {$version:
 				installdir => $installdir,
 			}
-			class {'mysql::server':
-				root_password => $root_password,
+			if !defined(Class['mysql::server']) {
+				class {'mysql::server':
+					root_password => $root_password,
+				}
 			}
 			if !defined(Class['apache']) {
 				class {'apache':
