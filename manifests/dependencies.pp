@@ -4,5 +4,5 @@ class phpmyadmin::dependencies
         fail("Unsupported platform: ${osfamily}/${operatingsystem}")
     }
     require wget
-    phpmyadmin::secure::install {['php5', 'php5-mysql']:}
+    phpmyadmin::secure::install {['php5', 'php5-mysql','php5-mcrypt']:}
 }
