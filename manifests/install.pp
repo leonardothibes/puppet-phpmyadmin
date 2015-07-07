@@ -2,7 +2,7 @@ define phpmyadmin::install($version = $title, $installdir)
 {
 	# Params
 	$pkgname     = "phpMyAdmin-${version}-all-languages.tar.bz2"
-	$urlsource   = "http://downloads.sourceforge.net/project/phpmyadmin/phpMyAdmin/${version}/phpMyAdmin-${version}-all-languages.tar.bz2" 
+	$urlsource   = "https://files.phpmyadmin.net/phpMyAdmin/${version}/phpMyAdmin-${version}-all-languages.tar.bz2" 
 	$destination = "${phpmyadmin::params::srcdir}/${pkgname}"
 	# Params
 
