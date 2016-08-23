@@ -12,7 +12,7 @@ define phpmyadmin::install($version = $title, $installdir)
 			ensure => directory,
 			owner  => root,
 			group  => root,
-			mode   => 0755,
+			mode   => '0755',
 		}
 	}
 	# Creating source directory
@@ -43,7 +43,7 @@ define phpmyadmin::install($version = $title, $installdir)
 		ensure => directory,
 		owner  => root,
 		group  => root,
-		mode   => 0755,
+		mode   => '0755',
 	}
 	exec {'copy-phpmyadmin':
 		command => "cp -Rf ${phpmyadmin::params::srcdir}/phpMyAdmin-${version}-all-languages ${phpmyadmin::params::instdir}/${version}",
